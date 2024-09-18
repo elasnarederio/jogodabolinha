@@ -12,19 +12,19 @@ const originalBackgroundColor = '#87CEEB';  // Cor original de fundo
 document.addEventListener('keydown', (event) => {
     switch (event.code) {
         case 'ArrowUp':
-            if (posY > 0) 
+            if (posY > 0)
                 posY = posY - moveSpeed;
             break;
         case 'ArrowDown':
-            if (posY < window.innerHeight - circle.offsetHeight) 
+            if (posY < window.innerHeight - circle.offsetHeight)
                 posY = posY + moveSpeed;
             break;
         case 'ArrowLeft':
-            if (posX > 0) 
+            if (posX > 0)
                 posX = posX - moveSpeed;
             break;
         case 'ArrowRight':
-            if (posX < window.innerWidth - circle.offsetWidth) 
+            if (posX < window.innerWidth - circle.offsetWidth)
                 posX = posX + moveSpeed;
             break;
     }
@@ -38,8 +38,7 @@ function updateCirclePosition() {
 }
 
 // Função para criar quadrados
-function createSquares() 
-{
+function createSquares() {
     clearShapes();
     gameArea.style.backgroundColor = 'red';
 
@@ -65,3 +64,9 @@ function createCircles() {
         gameArea.appendChild(smallCircle);
     }
 }
+// Função para limpar as formas existentes
+function clearShapes() {
+    const shapes = document.querySelectorAll('.square, .small-circle');
+    shapes.forEach(shape => shape.remove());
+}
+
