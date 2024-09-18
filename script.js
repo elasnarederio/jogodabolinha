@@ -70,3 +70,8 @@ function clearShapes() {
     shapes.forEach(shape => shape.remove());
 }
 
+// Função para resetar o fundo e remover formas (botão 3)
+function resetGameArea() {
+    clearShapes();
+    gameArea.style.backgroundColor = originalBackgroundColor;
+}
