@@ -27,3 +27,10 @@ document.addEventListener('keydown', (event) => {
     }
     updateCirclePosition();
 });
+
+// Função que atualiza a posição do círculo
+function updateCirclePosition() {
+    circle.style.left = `${posX}px`;
+    circle.style.top = `${posY}px`;
+}
+
