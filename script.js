@@ -16,13 +16,16 @@ document.addEventListener('keydown', (event) => {
                 posY = posY - moveSpeed;
             break;
         case 'ArrowDown':
-            if (posY < window.innerHeight - circle.offsetHeight) posY += moveSpeed;
+            if (posY < window.innerHeight - circle.offsetHeight) 
+                posY = posY + moveSpeed;
             break;
         case 'ArrowLeft':
-            if (posX > 0) posX -= moveSpeed;
+            if (posX > 0) 
+                posX = posX - moveSpeed;
             break;
         case 'ArrowRight':
-            if (posX < window.innerWidth - circle.offsetWidth) posX += moveSpeed;
+            if (posX < window.innerWidth - circle.offsetWidth) 
+                posX = posX + moveSpeed;
             break;
     }
     updateCirclePosition();
