@@ -75,3 +75,14 @@ function resetGameArea() {
     clearShapes();
     gameArea.style.backgroundColor = originalBackgroundColor;
 }
+
+// Eventos para clicar nos botões 1, 2 e 3
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Digit1') {
+        createSquares();
+    } else if (event.code === 'Digit2') {
+        createCircles();
+    } else if (event.code === 'Digit3') {
+        resetGameArea();  // Reseta as cores e remove as formas
+    }
+});
